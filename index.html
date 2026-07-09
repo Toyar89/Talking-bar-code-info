@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Talking Statue</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Desktop, rotate, start, call and credits screens -->
+<section id="desktop" class="screen active"><div class="desktop-card"><h1>Made only for smartphone screens</h1><p>Please open this page on a smartphone. If testing on desktop, resize the browser until it is narrow.</p></div></section>
+<section id="rotate" class="screen phone-screen"><div class="photo-bg"></div><div class="panel"><img class="rotate-img" src="images/turn-phone.png" alt="Rotate phone"><h2>Rotate your phone vertically</h2><p class="small">This call experience works best in portrait mode.</p></div></section>
+<section id="start" class="screen phone-screen"><div class="photo-bg"></div><div class="status"><span class="phone-time"></span><span>▮▮▮  Wi‑Fi  🔋</span></div><div class="panel"><h2>Talking Statue</h2><p class="small"><strong>BE SURE PHONE RINGER VOLUME IS ACTIVE</strong><br><br>Tap start to begin the incoming call.</p><button id="startBtn" class="start-btn" type="button">START</button></div></section>
+<section id="incoming" class="screen phone-screen"><div class="photo-bg"></div><div class="status"><span class="phone-time"></span><span>▮▮▮  Wi‑Fi  🔋</span></div><div class="call-top"><p class="call-state">Incoming call</p><p class="caller-name">John Macleod</p></div><div class="buttons"><div class="choice"><button id="declineBtn" class="call-btn" type="button"><img src="images/call-decline.png" alt="Decline"></button><span>Decline</span></div><div class="choice"><button id="acceptBtn" class="call-btn" type="button"><img src="images/call-accept.png" alt="Accept"></button><span>Accept</span></div></div></section>
+<section id="incall" class="screen phone-screen"><div class="photo-bg"></div><div class="status"><span class="phone-time"></span><span>▮▮▮  Wi‑Fi  🔋</span></div><div class="call-top"><p class="call-state">Connected</p><p class="caller-name">John Macleod</p><div id="callTimer">00:00</div></div><div class="hang"><button id="hangBtn" class="call-btn" type="button"><img src="images/call-decline.png" alt="Hang up"></button></div></section>
+<section id="credits" class="screen phone-screen"><div class="photo-bg"></div><div class="credits-card"><h2>Credits</h2><div class="row"><p class="label">Made by</p><p class="value">Kev Shirreffs</p></div><div class="row"><p class="label">Produced by</p><p class="value">JJR Macleod Memorial Statue Society</p></div><div class="row"><p class="label">Narrated by</p><p class="value">David Rintoul</p></div><div class="row"><p class="label">Developed by</p><p class="value">Talking Statue Template</p></div><button id="replayBtn" class="replay-btn" type="button">Listen again</button></div></section>
+<audio id="ringtone" preload="auto" loop src="audio/ringtone-ios.mp3"></audio>
+<audio id="speech" preload="auto" src="audio/speech.mp3"></audio>
+<script src="js/script.js"></script>
+</body>
+</html>
