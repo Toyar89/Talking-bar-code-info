@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Talking Statue</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <section id="desktop" class="screen active desktop-screen">
+      <div class="desktop-card">
+        <h1>Made only for smartphone screens</h1>
+        <p>Please open this page on a smartphone. For desktop testing, make the browser window narrower.</p>
+      </div>
+    </section>
+
+    <section id="rotate" class="screen phone-screen">
+      <div class="incoming-photo"></div>
+      <div class="shade"></div>
+      <div class="panel">
+        <img class="rotate-icon" src="images/turn-phone.png" alt="Rotate phone vertically">
+        <h2>Rotate your phone vertically</h2>
+        <p>This experience works best in portrait mode.</p>
+      </div>
+    </section>
+
+    <section id="start" class="screen phone-screen">
+      <div class="incoming-photo"></div>
+      <div class="shade"></div>
+      <div class="status"><span class="phone-time"></span><span>▮▮▮ Wi-Fi 🔋</span></div>
+      <div class="panel">
+        <h2>Talking Statue</h2>
+        <p><strong>MAKE SURE YOUR PHONE VOLUME IS ON</strong></p>
+        <p>Tap Start to begin the experience.</p>
+        <button id="startBtn" class="primary-btn" type="button">START</button>
+      </div>
+    </section>
+
+    <section id="incoming" class="screen phone-screen">
+      <div class="incoming-photo"></div>
+      <div class="shade"></div>
+      <div class="status"><span class="phone-time"></span><span>▮▮▮ Wi-Fi 🔋</span></div>
+      <div class="call-copy">
+        <p class="call-state">Incoming call</p>
+        <h2 class="caller-name">John Macleod</h2>
+      </div>
+      <div class="call-actions">
+        <div class="choice">
+          <button id="declineBtn" class="call-btn" type="button" aria-label="Decline call">
+            <img src="images/call-decline.png" alt="">
+          </button>
+          <span>Decline</span>
+        </div>
+        <div class="choice">
+          <button id="acceptBtn" class="call-btn pulse" type="button" aria-label="Accept call">
+            <img src="images/call-accept.png" alt="">
+          </button>
+          <span>Accept</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="incall" class="screen phone-screen">
+      <video id="answeredVideo" class="answered-video" playsinline preload="auto">
+        <source src="video/answered.mp4" type="video/mp4">
+      </video>
+      <div class="video-shade"></div>
+      <div class="status"><span class="phone-time"></span><span>▮▮▮ Wi-Fi 🔋</span></div>
+      <div class="call-copy connected-copy">
+        <p class="call-state">Connected</p>
+        <h2 class="caller-name">John Macleod</h2>
+        <p id="callTimer" class="timer">00:00</p>
+      </div>
+      <div class="hangup-wrap">
+        <button id="hangBtn" class="call-btn" type="button" aria-label="End call">
+          <img src="images/call-decline.png" alt="">
+        </button>
+      </div>
+    </section>
+
+    <section id="credits" class="screen phone-screen credits-screen">
+      <div class="incoming-photo"></div>
+      <div class="shade credits-shade"></div>
+      <div class="credits-card">
+        <h2>Credits</h2>
+        <p class="credit-label">Made by</p><p>Kev Shirreffs</p>
+        <p class="credit-label">Produced by</p><p>JJR Macleod Memorial Statue Society</p>
+        <p class="credit-label">Narrated by</p><p>David Rintoul</p>
+        <p class="credit-label">Developed by</p><p>Talking Statue Template</p>
+        <button id="replayBtn" class="primary-btn" type="button">Listen again</button>
+      </div>
+    </section>
+  </main>
+
+  <audio id="ringtone" src="audio/ringtone.mp3" preload="auto" loop></audio>
+  <script src="js/script.js"></script>
+</body>
+</html>
